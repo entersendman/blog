@@ -13,16 +13,18 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
  body,html {
  	padding: 0;
  	margin: 0;
+ 	font-family: 'Open Sans', sans-serif;
 
  }
 .header {
 	padding: 0;
 	margin: 0;
 
-	background-color: black;
+	background-color:#433e3b;
 }
 .header ul {
 	color: #fff;
@@ -38,22 +40,64 @@
 }
 .postsArea {
 	display: flex;
-	background-color: #000;
+	background: linear-gradient(to right, #35312f ,#433e3b );
 	justify-content: center;
-	padding: 15px;
+	padding: 0% 5%;
 }
 .title {
 	font-size: 2rem;
+	padding: 15px;
+	font-weight: 700;
 }
 .text {
 	padding: 15px;
+	font-size: 1.1rem;
+	letter-spacing: 0.12rem;
 }
 .article {
-	background-color:#f1f1f1;
-	width: 80%;
-	border-radius: 10px;
+	background: linear-gradient(to top right, #433e3b ,#55514e );
+	color: white;
+	padding: 15px;
+	margin: 10px 0px;
+	width: 100%;
 }
 .overBlog  {
 	text-align: center;
 	font-size: 3rem;
+}
+.overBlog  span {
+	color: #d0364b;
+}
+
+.banner {
+	padding:  0% 5%;
+	color: #433e3b;
+	background: #7c202d;
+} 
+.overbanner {
+	background: linear-gradient(to right, #d0364b , #d95e6e );
+	padding: 7% 5% 5% 0%;
+}
+.banner ul li{
+	color: white;
+	list-style: none;
+	font-size: 2.35rem;
+	padding: 6px 15px;
+	font-weight: 400;
+
+}
+.banner ul{
+padding: 15px;
+}
+
+footer {
+padding:  0% 5%;
+color: #433e3b;
+background: linear-gradient(to top right, #433e3b ,#55514e );
+text-align: center;
+color: white;
+}
+
+.overfooter {
+	padding: 2% 5% 2% 5%;
 }

@@ -1,29 +1,23 @@
 <span id="notice"><%= notice %></span>
 
+   
 
 
-<table>
-  <thead >    
-    
-  </thead>
-  <header class="header">
-    <ul>
-      <li>Main</li>
-        <li><input type="text" ng-model="query"></li>  
-    </ul>
 
-  </header>
-  <tbody >
-    <p class="overBlog">Posts</p>
+<div class="banner">
+  <div class="overbanner">
+  <ul>
+<li>What we do?</li>
+<li>What we are thinking about?</li>
+<li>Answers for this questions and another you can find here.</li>
+  </ul>
+  </div>
+</div>
 
-    <div class="postsArea" ng-repeat="p in posts | filter:query"> 
-      <div class="article">
-      <div class="title">{{p.title}}</div>
-      <div class="text">{{p.text}}</div>
-      </div>
-    </div>
-  </tbody>
-</table>
 
-<br>
-<%= link_to 'New Post', new_post_path %>
+<div class="postsArea" ng-repeat="p in posts | filter:query"> 
+  <div class="article">
+  <div class="title">{{p.title}}</div>
+  <div class="text">{{p.text}}</div>
+  </div>
+</div>

@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>App</title>
-
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <%= csrf_meta_tags %>
 
@@ -11,6 +10,18 @@
   </head>
 
   <body ng-app="MyApp" ng-controller="MyCtrl">
+
+<header class="header">
+  <ul>
+    <li>Main</li>
+      <li><input type="text" ng-model="query"></li>  
+  </ul>
+</header>
     <%= yield %>
+    <footer>
+      <div class="overfooter ">
+      overstudio is happy to coloborate with you
+      </div>
+    </footer>
   </body>
 </html>
