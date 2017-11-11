@@ -1,29 +1,29 @@
-<p id="notice"><%= notice %></p>
+<span id="notice"><%= notice %></span>
 
-<h1>Posts</h1>
+
 
 <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Text</th>
-      <th colspan="3"></th>
-    </tr>
+  <thead >    
+    
   </thead>
+  <header class="header">
+    <ul>
+      <li>Main</li>
+        <li><input type="text" ng-model="query"></li>  
+    </ul>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.text %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  </header>
+  <tbody >
+    <p class="overBlog">Posts</p>
+
+    <div class="postsArea" ng-repeat="p in posts | filter:query"> 
+      <div class="article">
+      <div class="title">{{p.title}}</div>
+      <div class="text">{{p.text}}</div>
+      </div>
+    </div>
   </tbody>
 </table>
 
 <br>
-
 <%= link_to 'New Post', new_post_path %>

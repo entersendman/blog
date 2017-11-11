@@ -13,3 +13,19 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+var MyApp = angular.module('MyApp', []);
+
+MyApp.controller('MyCtrl', function($scope, $http) {
+$scope.posts;
+$http({
+	method: 'GET',
+	url: '/posts.json'
+}).then(function successCallback(response) {
+
+$scope.posts = response.data;
+
+console.log(response.data);
+}, function errorCallback(response) {
+
+});
+});
